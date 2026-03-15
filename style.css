@@ -1,5 +1,5 @@
 body{
-background-color:#0d1117;
+background-color:transparent;
 color:#00ff9c;
 font-family: monospace;
 margin:0;
@@ -15,14 +15,13 @@ border-bottom:1px solid #00ff9c;
 margin-bottom:40px;
 padding-bottom:20px;
 } 
-matrix{
+#matrix{
 position:fixed;
 top:0;
 left:0;
-width:100%;
-height:100%;
+width:100vw;
+height:100vh;
 z-index:-1;
-pointer-events:none;
 }
 
 h1{
@@ -59,4 +58,9 @@ margin-top:30px;
 
 p{
 color:#c9d1d9;
-}
+} 
+.content{
+background:rgba(13,17,23,0.85);
+padding:40px;
+border-radius:10px;
+} 
