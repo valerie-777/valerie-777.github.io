@@ -10,8 +10,26 @@
 <canvas id="matrix"></canvas>
 
 <header>
-<h1>> Valerie Kiprop</h1>
-<p>Cybersecurity Analyst | Threat Detection | Network Security</p>
+<h1 id="typing"></h1>
+<p>Cybersecurity Analyst | Threat Detection | Network Security</p>  
+<script>
+
+const text = "Valerie Kiprop - Cybersecurity Analyst";
+let i = 0;
+
+function typing(){
+
+if(i < text.length){
+document.getElementById("typing").innerHTML += text.charAt(i);
+i++;
+setTimeout(typing,60);
+}
+
+}
+
+typing();
+
+</script>
 </header>
 
 <section>
