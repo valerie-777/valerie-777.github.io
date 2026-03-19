@@ -65,3 +65,24 @@ background:rgba(13,17,23,0.85);
 padding:40px;
 border-radius:10px;
 } 
+details{
+margin-top:15px;
+border:1px solid #30363d;
+border-radius:6px;
+padding:10px;
+background:#161b22;
+}
+
+summary{
+cursor:pointer;
+color:#00ff9c;
+font-weight:bold;
+}
+
+summary:hover{
+text-shadow:0 0 5px #00ff9c;
+}
+
+details p{
+margin-top:10px;
+}
