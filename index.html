@@ -165,7 +165,7 @@ Introduction to Web Applications</p>
 
 <section>
 
-<h2>> TryHackMe Rooms</h2>
+<h2>> TryHackMe Labs</h2>
 
 <div class="card">
 
@@ -180,7 +180,20 @@ Introduction to Web Applications</p>
 > Key Lessons Learned: Identifying active AD services, understanding the danger of user accounts that do not require Kerberos pre-authentication, and seeing firsthand how Pass-the-Hash and credential dumping lead to total domain compromise.<br> 
   
 > Link to Completed Room: https://tryhackme.com/room/attacktivedirectory?utm_campaign=social_share&utm_medium=social&utm_content=share-completed-room&utm_source=copy&sharerId=64fca550f47415574dbafdb9</p>
+</details> 
+
+<details>
+<summary>> Sweettooth Inc. </summary>
+<p>> What it entails: A web and container exploitation lab. It requires gaining an initial foothold on a server running an InfluxDB database and subsequently breaking out of a Docker container.<br>
+
+> Approach: I started by enumerating open ports to identify the InfluxDB instance. By forging a JWT (JSON Web Token), I gained unauthorized access to extract SSH credentials. Once inside the Docker container, I abused an exposed Docker Engine API (often found on port 8080) to mount the host filesystem and execute a reverse shell, fully compromising the underlying host machine.<br>
+
+> Tools Used: Nmap, curl, Influx CLI, Docker, Netcat.<br>
+
+> Key Lessons Learned: Exploiting JWT vulnerabilities, identifying containerized environments, and understanding how Docker Engine API misconfigurations can lead to container escapes and host privilege escalation.<br>
+> Link to Completed Room: https://tryhackme.com/room/sweettoothinc?utm_campaign=social_share&utm_medium=social&utm_content=share-completed-room&utm_source=copy&sharerId=64fca550f47415574dbafdb9</p>
 </details>
+
 </div>
 
 </section>
@@ -188,9 +201,9 @@ Introduction to Web Applications</p>
 <section>
 <h2>> Contact</h2>
 <div class="card">
-<p>Email: valeriekiprop@gmail.com<br>
-GitHub: github.com/valerie-777<br>
-LinkedIn: http://linkedin.com/in/valerie-kiprop-91aa88218</p>
+<p>> Email: valeriekiprop@gmail.com<br>
+> GitHub: github.com/valerie-777<br>
+> LinkedIn: http://linkedin.com/in/valerie-kiprop-91aa88218</p>
 </div>
 </section>
 
