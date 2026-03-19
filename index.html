@@ -169,24 +169,18 @@ Introduction to Web Applications</p>
 
 <div class="card">
 
-<p>Attacktive Directory<br> 
-Python Basics<br> 
-DNS in Detail<br>
-Sweettooth Inc<br>
-Junior Security Analyst Intro<br>
-Passive Reconnaissance<br>
-Threat Intelligence Tools<br>
-Intro to Digital Forensics<br>
-Offensive Security Intro<br>
-Web Application Security<br>
-SOC L1 Alert Triage<br>
-SOC Role in Blue Team<br>
-OWASP Top 10 2025: IAAA Failures<br>
-OWASP Top 10 2025: Application Design Flaws<br>
-OWASP Top 10 2025: Insecure Data Handling<br>
-WiFi Hacking 101<br>
-L2 Mac Flooding and ARP Spoofing</p>
+<details>
+<summary>> Attacktive Directory</summary>
+<p>> What it entails: It's a foundational lab focusing on attacking a vulnerable Windows Active Directory (AD) environment. It simulates a corporate network to teach domain enumeration and credential extraction.<br>
 
+> Approach: I began by performing initial enumeration to map the network and found valid domain users. Next, I abused Kerberos pre-authentication via AS-REP Roasting to extract ticket hashes. After cracking those hashes offline, I used the compromised credentials to dump the Domain Controller's NTDS.dit file, granting me full administrative control over the domain.<br>
+
+> Tools Used: Nmap, Enum4linux, Kerbrute, Impacket (GetNPUsers.py, secretsdump.py), BloodHound, and Hashcat.<br>
+
+> Key Lessons Learned: Identifying active AD services, understanding the danger of user accounts that do not require Kerberos pre-authentication, and seeing firsthand how Pass-the-Hash and credential dumping lead to total domain compromise.<br> 
+  
+> Link to Completed Room: https://tryhackme.com/room/attacktivedirectory?utm_campaign=social_share&utm_medium=social&utm_content=share-completed-room&utm_source=copy&sharerId=64fca550f47415574dbafdb9</p>
+</details>
 </div>
 
 </section>
