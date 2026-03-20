@@ -147,20 +147,101 @@ Vulnerability Assessment • Risk Management • Compliance Documentation</p>
 
 <section>
 
-<h2>> HackTheBox Academy Modules</h2>
+<h2>> HackTheBox Academy Labs</h2>
 
 <div class="card">
-<p>SQL Injection Fundamentals<br>
-Using the Metasploit Framework<br>
-Attacking Web Applications with Ffuf<br>
-Vulnerability Assessment<br>
-Intro to Academy<br>
-Introduction to Networking<br>
-Getting Started<br>
-Linux Fundamentals<br>
-Introduction to Web Applications</p>
-</div>
 
+</div>
+<details>
+<summary>> SQL Injection Fundamentals </summary>
+<p>> It is a web exploitation lab focused on the core concepts of SQL injection, teaching how to identify vulnerabilities and exploit them to dump databases or bypass authentication mechanisms.</p>
+
+<p>> I started by identifying vulnerable input vectors in web applications. From there, I crafted malicious SQL payloads (such as UNION-based or error-based injections) to manipulate backend queries. Finally, I automated the extraction process using specialized tools to retrieve sensitive data directly from the relational database.</p>
+
+<p>> Tools Used: SQLMap, Burp Suite, Firefox Developer Tools.</p>
+
+<p>> Key Lessons Learned: Understanding how relational databases parse queries, crafting manual SQL payloads, recognizing the importance of input sanitization and parameterized queries, and realizing the severity of poorly filtered user input.</p>
+
+<p>> Link to Completed Room: https://academy.hackthebox.com/achievement/2009886/33</p>
+</details>
+
+<details>
+<summary>> Using the Metasploit Framework </summary>
+<p>> This module is a comprehensive guide to the Metasploit Framework, covering its architecture, payload generation, and fundamental exploitation techniques for both initial access and post-exploitation.</p>
+
+<p>> I familiarized myself with the msfconsole interface, searching for relevant exploits for target services. I configured module options, generated custom payloads with MSFvenom to bypass simple restrictions, and established Meterpreter sessions to interact directly with the compromised target systems.</p>
+
+<p>> Tools Used: Metasploit Framework (msfconsole), MSFvenom, Meterpreter.</p>
+
+<p>> Key Lessons Learned: Navigating the framework's database, understanding the difference between bind and reverse shells, managing active sessions, and executing basic post-exploitation commands to gather system information.</p>
+
+<p>> Link to Completed Room: https://academy.hackthebox.com/achievement/2009886/39</p>
+</details>
+
+<details>
+<summary>> Attacking Web Applications with Ffuf </summary>
+<p>> This lab details advanced web fuzzing techniques using Ffuf to discover hidden directories, files, parameters, and virtual hosts that are not publicly linked or visible.</p>
+
+<p>> I used Ffuf combined with various SecLists wordlists to brute-force web directories. I also performed Host header fuzzing to discover hidden subdomains and fuzzed for hidden GET/POST parameters to map out the complete, underlying attack surface of the target web applications.</p>
+
+<p>> Tools Used: Ffuf, SecLists (Wordlists).</p>
+
+<p>> Key Lessons Learned: Mastering Ffuf syntax, fine-tuning fuzzing speed and response filters to eliminate false positives, and understanding the critical importance of thorough, automated web enumeration before attempting exploitation.</p>
+
+<p>> Link to Completed Room: https://academy.hackthebox.com/achievement/2009886/54</p>
+</details>
+
+<details>
+<summary>> Vulnerability Assessment </summary>
+<p>> This defensive and offensive module focuses on the methodology and tools used to identify, quantify, and prioritize vulnerabilities within a network environment.</p>
+
+<p>> I learned how to conduct structured vulnerability scans against target networks. After gathering the scan results, I analyzed the output to filter out false positives, categorized the legitimate findings using the Common Vulnerability Scoring System (CVSS), and structured a professional vulnerability assessment report.</p>
+
+<p>> Tools Used: Nessus, OpenVAS, Nmap (NSE scripts).</p>
+
+<p>> Key Lessons Learned: Differentiating between the presence of a vulnerability and an actual exploit, understanding risk rating methodologies like CVSS, and recognizing the importance of clear reporting and remediation planning for clients.</p>
+
+<p>> Link to Completed Room: https://academy.hackthebox.com/achievement/2009886/108</p>
+</details>
+
+<details>
+<summary>> Introduction to Networking </summary>
+<p>> A foundational networking module covering core concepts like network topologies, the OSI and TCP/IP models, routing, and common network protocols.</p>
+
+<p>> I studied the flow of data across networks and learned how IP addressing and subnetting work. I then captured and analyzed packet data to understand protocols like TCP, UDP, ARP, and DNS at a granular level, observing how devices communicate on local and wide area networks.</p>
+
+<p>> Tools Used: Wireshark, Tcpdump, Ping, Traceroute.</p>
+
+<p>> Key Lessons Learned: Grasping the layers of the OSI model, understanding subnetting and routing tables, and gaining the practical ability to analyze raw network traffic to troubleshoot issues or identify anomalous behavior.</p>
+
+<p>> Link to Completed Room: https://academy.hackthebox.com/achievement/2009886/34</p>
+</details>
+
+<details>
+<summary>> Linux Fundamentals </summary>
+<p>> This module teaches essential Linux command-line skills, basic system administration, and user management necessary for both offensive penetration testing and defensive security.</p>
+
+<p>> I navigated the Linux file system using terminal commands, managed user and group permissions, and manipulated text output using tools like grep and awk. I also managed running system processes and learned how to interact with remote servers securely via SSH.</p>
+
+<p>> Tools Used: Bash shell, SSH, standard Linux utilities (grep, awk, find, systemctl).</p>
+
+<p>> Key Lessons Learned: Navigating the Linux hierarchy comfortably, mastering file permissions (chmod/chown), understanding package management, and utilizing basic shell scripts to automate repetitive system tasks.</p>
+
+<p>> Link to Completed Room: https://academy.hackthebox.com/achievement/2009886/18</p>
+</details>
+
+<details>
+<summary>> Introduction to Web Applications </summary>
+<p>> This module covers the architecture and foundational technologies that power the modern web, breaking down how front-end and back-end components interact.</p>
+
+<p>> I explored the mechanics of HTTP requests and responses, examining the Document Object Model (DOM) in the browser. I analyzed how cookies and session tokens manage user states, and learned how APIs facilitate data exchange between the client interface and the backend database.</p>
+
+<p>> Tools Used: Web Browser (Chrome/Firefox), Browser Developer Tools, cURL.</p>
+
+<p>> Key Lessons Learned: Understanding the HTTP protocol (methods, headers, status codes), differentiating between client-side and server-side execution, and recognizing the mechanisms web applications use to maintain state and session security.</p>
+
+<p>> Link to Completed Room: https://academy.hackthebox.com/achievement/2009886/75</p>
+</details>
 </section>
 
 <section>
