@@ -85,4 +85,13 @@ text-shadow:0 0 5px #00ff9c;
 
 details p{
 margin-top:10px;
+} 
+.card a{
+color:#58a6ff;
+font-weight:bold;
+}
+
+.card a:hover{
+color:#00ff9c;
+text-shadow:0 0 5px #00ff9c;
 }
