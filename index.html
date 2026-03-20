@@ -213,7 +213,7 @@ Introduction to Web Applications</p>
 
 <P>> I relied on publicly available records and open-source intelligence (OSINT) to map out the target's domain ownership, DNS configurations, and hidden subdomains without alerting the target.</p>
 
-<p>>Tools Used: whois, nslookup, dig, DNSDumpster, and Shodan.</p>
+<p>> Tools Used: whois, nslookup, dig, DNSDumpster, and Shodan.</p>
 
 <p>> Key Lessons Learned: Recognizing how much attack surface can be discovered purely through public databases, mastering DNS enumeration, and understanding why operational security (OPSEC) matters before the active scanning phase even begins.</p>
   
@@ -221,16 +221,29 @@ Introduction to Web Applications</p>
 </details> 
 
 <details>
-<summary>> Passive Reconnaissance</summary>
-<p>> It is an introductory networking and reconnaissance lab centered on gathering intelligence about a target without making any direct or noisy connections to their infrastructure.</p>
+<summary>> Wifi Hacking</summary>
+<p>> It is a wireless security lab dedicated to understanding and breaking Wi-Fi encryption protocols, specifically focusing on WPA/WPA2 networks</p>
 
-<P>> I relied on publicly available records and open-source intelligence (OSINT) to map out the target's domain ownership, DNS configurations, and hidden subdomains without alerting the target.</p>
+<P>> I placed my wireless card in monitor mode to capture ambient traffic. By deauthenticating a legitimately connected client, you force them to reconnect, allowing you to intercept the WPA 4-way handshake. Finally, you run a dictionary attack against the captured handshake to reveal the plaintext Wi-Fi password.</p>
 
-<p>>Tools Used: whois, nslookup, dig, DNSDumpster, and Shodan.</p>
+<p>> Tools Used: The Aircrack-ng suite (airmon-ng, airodump-ng, aireplay-ng, aircrack-ng), Wireshark, and Hashcat.</p>
 
-<p>> Key Lessons Learned: Recognizing how much attack surface can be discovered purely through public databases, mastering DNS enumeration, and understanding why operational security (OPSEC) matters before the active scanning phase even begins.</p>
+<p>> Key Lessons Learned: Grasping the mechanics of the WPA 4-way handshake, understanding the inherent vulnerabilities of weak Wi-Fi passwords, and seeing how wireless packet injection facilitates rapid network attacks.</p>
   
-<p>> Link to Completed Room: https://tryhackme.com/room/passiverecon?utm_campaign=social_share&utm_medium=social&utm_content=share-completed-room&utm_source=copy&sharerId=64fca550f47415574dbafdb9</p>
+<p>> Link to Completed Room: https://tryhackme.com/room/wifihacking101?utm_campaign=social_share&utm_medium=social&utm_content=share-completed-room&utm_source=copy&sharerId=64fca550f47415574dbafdb9</p>
+</details> 
+
+<details>
+<summary>> L2 Mac Flooding and ARP Spoofing</summary>
+<p>> It is a network security lab focused on manipulating Layer 2 of the OSI model to intercept and hijack traffic on a local area network (LAN).</p>
+
+<P>> The attack is two-fold. First, I flooded the network switch's CAM table with fake MAC addresses (MAC Flooding), forcing the switch to act like a hub and broadcast traffic to all ports. Second, I sent forged ARP messages to associate my attacker MAC address with the IP address of the default gateway, enabling a seamless Man-in-the-Middle (MitM) attack.</p>
+
+<p>> Tools Used: macof, arpspoof, Ettercap, and Wireshark.</p>
+
+<p>> Key Lessons Learned: Understanding how network switches handle MAC address tables, recognizing the lack of authentication in the ARP protocol, and realizing how easily local network traffic can be redirected and analyzed.</p>
+  
+<p>> Link to Completed Room: https://tryhackme.com/room/layer2?utm_campaign=social_share&utm_medium=social&utm_content=share-completed-room&utm_source=copy&sharerId=64fca550f47415574dbafdb9</p>
 </details> 
 </div>
 
