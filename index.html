@@ -171,40 +171,40 @@ Introduction to Web Applications</p>
 
 <details>
 <summary>> Attacktive Directory</summary>
-<p>> It's a foundational lab focusing on attacking a vulnerable Windows Active Directory (AD) environment. It simulates a corporate network to teach domain enumeration and credential extraction.<br>
+<p>> It's a foundational lab focusing on attacking a vulnerable Windows Active Directory (AD) environment. It simulates a corporate network to teach domain enumeration and credential extraction.</p>
 
-> I began by performing initial enumeration to map the network and found valid domain users. Next, I abused Kerberos pre-authentication via AS-REP Roasting to extract ticket hashes. After cracking those hashes offline, I used the compromised credentials to dump the Domain Controller's NTDS.dit file, granting me full administrative control over the domain.<br>
+<p>> I began by performing initial enumeration to map the network and found valid domain users. Next, I abused Kerberos pre-authentication via AS-REP Roasting to extract ticket hashes. After cracking those hashes offline, I used the compromised credentials to dump the Domain Controller's NTDS.dit file, granting me full administrative control over the domain.</p>
 
-> Tools Used: Nmap, Enum4linux, Kerbrute, Impacket (GetNPUsers.py, secretsdump.py), BloodHound, and Hashcat.<br>
+<p>> Tools Used: Nmap, Enum4linux, Kerbrute, Impacket (GetNPUsers.py, secretsdump.py), BloodHound, and Hashcat.</p>
 
-> Key Lessons learned: Identifying active AD services, understanding the danger of user accounts that do not require Kerberos pre-authentication, and seeing firsthand how Pass-the-Hash and credential dumping lead to total domain compromise.<br> 
+<p>> Key Lessons learned: Identifying active AD services, understanding the danger of user accounts that do not require Kerberos pre-authentication, and seeing firsthand how Pass-the-Hash and credential dumping lead to total domain compromise.</p> 
   
-> Link to Completed Room: https://tryhackme.com/room/attacktivedirectory?utm_campaign=social_share&utm_medium=social&utm_content=share-completed-room&utm_source=copy&sharerId=64fca550f47415574dbafdb9</p>
+<p>> Link to Completed Room: https://tryhackme.com/room/attacktivedirectory?utm_campaign=social_share&utm_medium=social&utm_content=share-completed-room&utm_source=copy&sharerId=64fca550f47415574dbafdb9</p>
 </details> 
 
 <details>
 <summary>> Sweettooth Inc. </summary>
-<p>> It's a web and container exploitation lab. It requires gaining an initial foothold on a server running an InfluxDB database and subsequently breaking out of a Docker container.<br>
+<p>> It's a web and container exploitation lab. It requires gaining an initial foothold on a server running an InfluxDB database and subsequently breaking out of a Docker container.</p>
 
-> I started by enumerating open ports to identify the InfluxDB instance. By forging a JWT (JSON Web Token), I gained unauthorized access to extract SSH credentials. Once inside the Docker container, I abused an exposed Docker Engine API (often found on port 8080) to mount the host filesystem and execute a reverse shell, fully compromising the underlying host machine.<br>
+<p>> I started by enumerating open ports to identify the InfluxDB instance. By forging a JWT (JSON Web Token), I gained unauthorized access to extract SSH credentials. Once inside the Docker container, I abused an exposed Docker Engine API (often found on port 8080) to mount the host filesystem and execute a reverse shell, fully compromising the underlying host machine.</p>
 
-> Tools Used: Nmap, curl, Influx CLI, Docker, Netcat.<br>
+<p>> Tools Used: Nmap, curl, Influx CLI, Docker, Netcat.</p>
 
-> Key Lessons Learned: Exploiting JWT vulnerabilities, identifying containerized environments, and understanding how Docker Engine API misconfigurations can lead to container escapes and host privilege escalation.<br>
-> Link to Completed Room: https://tryhackme.com/room/sweettoothinc?utm_campaign=social_share&utm_medium=social&utm_content=share-completed-room&utm_source=copy&sharerId=64fca550f47415574dbafdb9</p>
+<p>> Key Lessons Learned: Exploiting JWT vulnerabilities, identifying containerized environments, and understanding how Docker Engine API misconfigurations can lead to container escapes and host privilege escalation.</p>
+<p>> Link to Completed Room: https://tryhackme.com/room/sweettoothinc?utm_campaign=social_share&utm_medium=social&utm_content=share-completed-room&utm_source=copy&sharerId=64fca550f47415574dbafdb9</p>
 </details>
 
 <details>
 <summary>> Threat Intelligence Tools</summary>
-<p>> It is a Security Operations Center (SOC) focused defensive lab that explores various open-source intelligence tools used to triage incidents and analyze malicious activities.<br>
+<p>> It is a Security Operations Center (SOC) focused defensive lab that explores various open-source intelligence tools used to triage incidents and analyze malicious activities.</p>
 
-> I was tasked with investigating suspicious indicators of compromise (IOCs)—such as IP addresses, domains, malware hashes, and phishing emails—by querying various cyber threat intelligence databases to understand an adversary's footprint.<br>
+<p>> I was tasked with investigating suspicious indicators of compromise (IOCs)—such as IP addresses, domains, malware hashes, and phishing emails—by querying various cyber threat intelligence databases to understand an adversary's footprint.</p>
 
-> Tools Used: UrlScan.io, Abuse.ch (MalwareBazaar, Feodo Tracker), PhishTool, and Cisco Talos Intelligence.<br>
+<p>> Tools Used: UrlScan.io, Abuse.ch (MalwareBazaar, Feodo Tracker), PhishTool, and Cisco Talos Intelligence.</p>
 
-> Key Lessons Learned: Navigating the threat intelligence lifecycle, effectively classifying threat intel (Strategic, Technical, Tactical, Operational), and utilizing OSINT tools to dissect phishing emails and track malware infrastructure.<br>
+<p>> Key Lessons Learned: Navigating the threat intelligence lifecycle, effectively classifying threat intel (Strategic, Technical, Tactical, Operational), and utilizing OSINT tools to dissect phishing emails and track malware infrastructure.</p>
   
-> Link to Completed Room: https://tryhackme.com/room/threatinteltools?utm_campaign=social_share&utm_medium=social&utm_content=share-completed-room&utm_source=copy&sharerId=64fca550f47415574dbafdb9</p>
+<p>> Link to Completed Room: https://tryhackme.com/room/threatinteltools?utm_campaign=social_share&utm_medium=social&utm_content=share-completed-room&utm_source=copy&sharerId=64fca550f47415574dbafdb9</p>
 </details> 
 
 <details>
