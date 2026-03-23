@@ -134,13 +134,56 @@ Vulnerability Assessment • Risk Management • Compliance Documentation</p>
 <h2>> Projects</h2>
 
 <div class="card">
-<h3>Network Traffic Investigation</h3>
-<p>Analyzed suspicious packets using Wireshark and identified malicious C2 communication.</p>
-</div>
+<details>
+<summary>> Active Directory Exploitation (Attacktive Directory)</summary>
 
-<div class="card">
-<h3>Vulnerability Scanning Lab</h3>
-<p>Used Nmap and OpenVAS to discover vulnerabilities in a simulated enterprise network.</p>
+<p>> Scenario: A penetration test was conducted against a simulated corporate Active Directory environment to identify misconfigurations and vulnerabilities.</p>
+
+<p>> Objective: Enumerate the Active Directory environment, exploit known Kerberos vulnerabilities, and escalate privileges to Domain Admin.</p>
+
+<p>> Methodology:</p>
+<p>> I initiated the assessment with network enumeration to identify exposed services like SMB and Kerberos. I utilized Kerbrute for user enumeration and identified accounts vulnerable to AS-REP Roasting. Using Impacket, I extracted ticket-granting tickets (TGTs), cracked the offline hashes, and leveraged the credentials to escalate privileges and dump the Domain Controller's NTDS.dit file.</p>
+
+<p>> Findings:</p>
+<p>> - Discovered valid domain users through Kerberos pre-authentication enumeration<br>
+- Identified accounts with "Do not require Kerberos preauthentication" enabled<br>
+- Successfully extracted and cracked AS-REP hashes to gain initial access<br>
+- Leveraged compromised credentials to perform a DCSync attack and extract domain hashes</p>
+
+<p>> Tools Used: Nmap, Enum4linux, Kerbrute, Impacket, Hashcat</p>
+
+<p>> Outcome:</p>
+<p>> I successfully compromised the Domain Controller, gaining full administrative control over the Active Directory environment. Remediation recommendations included enforcing Kerberos pre-authentication, implementing strict password policies, and auditing DCSync permissions.</p>
+
+<p>> Evidence:</p>
+<p>> <a href="assets/screenshots/attacktive-directory.png" target="_blank">View Penetration Test Write-Up</a></p>
+
+</details>
+
+<details>
+<summary>> Container Breakout & Privilege Escalation (Sweettooth Inc.)</summary>
+
+<p>> Scenario: A security assessment was performed on a web application hosted within a containerized environment to evaluate its resilience against internal and external threats.</p>
+
+<p>> Objective: Gain initial access to the web application, enumerate the internal container environment, and successfully escape to compromise the underlying host system.</p>
+
+<p>> Methodology:</p>
+<p>> I performed initial reconnaissance to identify exposed web services and exploited a vulnerability to gain a reverse shell inside a Docker container. I conducted internal enumeration using manual techniques to identify misconfigurations. By leveraging an exposed Docker socket mounted within the container, I created a new privileged container with the host's root filesystem attached to break out.</p>
+
+<p>> Findings:</p>
+<p>> - Exploited a web application vulnerability to gain an initial foothold inside a container<br>
+- Identified that the container was running with excessive internal privileges<br>
+- Discovered the host's Docker socket (docker.sock) was accessible from within the container</p>
+
+<p>> Tools Used: Nmap, Gobuster, Netcat, LinPEAS, Docker</p>
+
+<p>> Outcome:</p>
+<p>> I successfully escaped the Docker container and obtained root-level access to the underlying host server. Remediation recommendations included adhering to the principle of least privilege, never mounting the Docker socket inside containers, and securing the web application layer.</p>
+
+<p>> Evidence:</p>
+<p>> <a href="assets/screenshots/sweettooth-inc.png" target="_blank">View Container Escape Write-Up</a></p>
+
+</details>
 </div>
 
 </section>
@@ -277,39 +320,6 @@ View Certificate
 <h2>> TryHackMe Labs</h2>
 
 <div class="card">
-
-<details>
-<summary>> Attacktive Directory</summary>
-<p>> It's a foundational lab focusing on attacking a vulnerable Windows Active Directory (AD) environment. It simulates a corporate network to teach domain enumeration and credential extraction.</p>
-
-<p>> I began by performing initial enumeration to map the network and found valid domain users. Next, I abused Kerberos pre-authentication via AS-REP Roasting to extract ticket hashes. After cracking those hashes offline, I used the compromised credentials to dump the Domain Controller's NTDS.dit file, granting me full administrative control over the domain.</p>
-
-<p>> Tools Used: Nmap, Enum4linux, Kerbrute, Impacket (GetNPUsers.py, secretsdump.py), BloodHound, and Hashcat.</p>
-
-<p>> Key Lessons learned: Identifying active AD services, understanding the danger of user accounts that do not require Kerberos pre-authentication, and seeing firsthand how Pass-the-Hash and credential dumping lead to total domain compromise.</p> 
-  
-<p>> Link to Completed Room: 
-<a href="https://tryhackme.com/room/attacktivedirectory" target="_blank">
-View Room
-</a>
-</p>
-</details> 
-<details>
-<summary>> Sweettooth Inc. </summary>
-<p>> It's a web and container exploitation lab. It requires gaining an initial foothold on a server running an InfluxDB database and subsequently breaking out of a Docker container.</p>
-
-<p>> I started by enumerating open ports to identify the InfluxDB instance. By forging a JWT (JSON Web Token), I gained unauthorized access to extract SSH credentials. Once inside the Docker container, I abused an exposed Docker Engine API (often found on port 8080) to mount the host filesystem and execute a reverse shell, fully compromising the underlying host machine.</p>
-
-<p>> Tools Used: Nmap, curl, Influx CLI, Docker, Netcat.</p>
-
-<p>> Key Lessons Learned: Exploiting JWT vulnerabilities, identifying containerized environments, and understanding how Docker Engine API misconfigurations can lead to container escapes and host privilege escalation.</p>
-
-<p>> Link to Completed Room: 
-<a href="https://tryhackme.com/room/sweettoothinc" target="_blank">
-View Room
-</a>
-</p>
-</details> 
 <details>
 <summary>> Threat Intelligence Tools</summary>
 <p>> It is a Security Operations Center (SOC) focused defensive lab that explores various open-source intelligence tools used to triage incidents and analyze malicious activities.</p>
